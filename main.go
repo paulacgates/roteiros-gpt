@@ -2,7 +2,9 @@ package main
 
 import (
 	"embed"
+	"fmt"
 	"log"
+	"net/http"
 	"os"
 	"strconv"
 	"text/template"
@@ -21,9 +23,17 @@ func main() {
 	criaDB(config.UsuarioOra, config.SenhaOra, config.IPOra, config.PortaOra, config.ServiceOra)
 	carregaTemplates()
 	log.Printf("Carregamento dos Templates OK")
+	roteador := criaRoteador()
+	addr := fmt.Sprintf(":%d", config.Porta)
 	log.Printf("Ouvindo na porta %d\n", config.Porta)
+	err := http.ListenAndServeTLS(addr, config.CertPath, config.KeyPath, roteador)
+	if err != nil {
+		log.Println("Não foi possível habilitar HTTPS pelo seguinte motivo:")
+		log.Println(err)
+		log.Println("O protocolo HTTP foi habilitado.")
+	}
 	log.Println("Pronto!")
-	//log.Fatalln(http.ListenAndServe(addr, roteador))
+	log.Fatalln(http.ListenAndServe(addr, roteador))
 }
 
 func carregaConfig() config {

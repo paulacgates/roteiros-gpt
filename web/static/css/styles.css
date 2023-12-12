@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 25px;
+    color: #C85104;
+    font-weight: 600;
+}
+header {
+    font-size: 19px;
+}
+.logo {
+    width: 5%;
+}
+
+.logo-img {
+    width: 100%;
+}
+.card-filtro {
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 0px 6px #00000029;
+  border-radius: 6px;
+}
+.btn-primary {
+    --bs-btn-bg: #C85104;
+    --bs-btn-border-color: #C85104;
+    --bs-btn-hover-bg: #a84502;
+    --bs-btn-active-bg: #a84502;
+    --bs-btn-active-border-color: #a84502;
+    --bs-btn-hover-border-color:#a84502;
+}
+
+.btn-adicionar{
+    font-size: 18px;
+}
+
+th {
+    color: #C85104 !important;
+  }

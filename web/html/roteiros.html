@@ -1,0 +1,35 @@
+{{template "head" .}}
+{{template "topo" .}}
+<script>
+    var nav = document.getElementById("navRoteiros")
+    nav.classList.add("active");
+</script>
+<section>
+    <div class="table-responsive m-4">
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">Apelido</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Local</th>
+                    <th scope="col">Dias</th>
+                    <th scope="col">Situação</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="position-absolute bottom-0 start-0">
+        <a class="btn btn-primary  mb-5 ms-4 btn-adicionar" href="/roteiros/adiciona"><i class="bi bi-plus-circle"></i>
+            Adicionar</a>
+        <a class="btn btn-primary  mb-5 ms-2 btn-adicionar" href="#"><i class="bi bi-funnel"></i></i>
+            Filtrar</a>
+        <a class="btn btn-primary  mb-5 ms-2 btn-adicionar" href="#"><i class="bi bi-trash"></i> Remover
+            Selecionados </a>
+    </div>
+
+</section>
+
+{{template "rodape" .}}

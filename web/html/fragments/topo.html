@@ -1,0 +1,32 @@
+{{define "topo"}}
+{{template "head" .}}
+
+<body>
+    <!--Topo-->
+    <header class="sticky-md-top">
+        <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #C85104;">
+            <div class="container-fluid">
+                <a href="/roteiros" class="navbar-brand logo"><img class="mb-2 logo-img"  src="web\static\img\roteirosgpt2.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a id="navRoteiros" class="nav-link" aria-current="page" href="/roteiros">Roteiros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navAdiciona" class="nav-link" href="/roteiros/adiciona">Criar Roteiro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navContato" class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!-- Fim do Topo-->
+    {{ end }}
